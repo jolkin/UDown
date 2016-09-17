@@ -91,7 +91,7 @@ public class User extends HttpServlet
 
                     if ( event.next( ) && rsvp.next( ) )
                     {
-                        String name = event.getString( "eventname" );
+//                        String name = event.getString( "eventname" );
                         HelperFunctions.eventToJson( event, rsvp, out );
                     }
                     //call other helper
@@ -107,7 +107,7 @@ public class User extends HttpServlet
             p.setInt( 1, uid );
 
             rs = p.executeQuery();
-            //call helper here
+            HelperFunctions.userInterestsToJson(rs, out);
             rs.close();
             con.close();
 

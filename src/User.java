@@ -109,7 +109,7 @@ public class User extends HttpServlet
             rs = p.executeQuery();
             if(rs.next())
             {
-                //userInterestsToJson(rs, out);
+                HelperFunctions.userInterestsToJson(rs, out);
             }
             //call helper here
             rs.close();

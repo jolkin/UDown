@@ -69,7 +69,7 @@ public class Event extends HttpServlet
 
                 e.setInt( 1, eid);
 
-                ResultSet event = p.executeQuery( );
+                ResultSet event = e.executeQuery( );
 
                 PreparedStatement people = con.prepareStatement( "select username from users T1 inner join events T2 on T1.user_id=T2.user_id and event_id = ?" );
 

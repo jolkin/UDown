@@ -102,11 +102,15 @@ public class User extends HttpServlet
                 }
             }
 
-            p = con.prepareStatement( "select interest from userInterests where user_id = ?" );
+            p = con.prepareStatement( "select interest, user_id from userInterests where user_id = ?" );
 
             p.setInt( 1, uid );
 
             rs = p.executeQuery();
+            if(rs.next())
+            {
+                //userInterestsToJson(rs, out);
+            }
             //call helper here
             rs.close();
             con.close();

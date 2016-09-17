@@ -54,34 +54,38 @@ public class Events extends HttpServlet
             resp.setContentType( "application/vnd.api+json" );
             PrintWriter out = resp.getWriter();
 
-            int uid = Integer.parseInt( req.getParameter( "uid" ) );
-
             PreparedStatement p = con.prepareStatement( "SELECT event_id from events" );
 
 
             ResultSet rs = p.executeQuery();
             while(!rs.isClosed())
             {
-                rs.next();
-                int eid = rs.getInt( 1 );
-                PreparedStatement e = con.prepareStatement( "select event_id, eventname, location, goTime, price, description, user_id from events where event_id = ? " );
-
-                e.setInt( 1, eid);
-
-                ResultSet event = p.executeQuery( );
-
-                PreparedStatement people = con.prepareStatement( "select username from users T1 inner join events T2 on T1.user_id=T2.user_id and event_id = ?" );
-
-                people.setInt( 1, eid );
-
-                ResultSet rsvp = people.executeQuery();
-
-                if ( event.next( ) && rsvp.next() )
+                if(rs.next())
                 {
-                    String name = event.getString( "eventname" );
-                    HelperFunctions.eventToJson(event, rsvp, out);
+                    int eid = rs.getInt( 1 );
+                    PreparedStatement e = con.prepareStatement( "SELECT event_id, eventname, location, goTime, price, description, user_id FROM events WHERE event_id = ? " );
+
+                    e.setInt( 1, eid );
+
+                    ResultSet event = e.executeQuery( );
+
+                    PreparedStatement people = con.prepareStatement( "SELECT username FROM users T1 INNER JOIN events T2 ON T1.user_id=T2.user_id AND event_id = ?" );
+
+                    people.setInt( 1, eid );
+
+                    ResultSet rsvp = people.executeQuery( );
+
+                    if ( event.next( ) && rsvp.next( ) )
+                    {
+                        String name = event.getString( "eventname" );
+                        HelperFunctions.eventToJson( event, rsvp, out );
+                    }
+                    //call other helper
                 }
-                //call other helper
+                else
+                {
+                    rs.close();
+                }
             }
             rs.close();
             con.close();

@@ -25,21 +25,21 @@ public class HelperFunctions
                         "\"id\":\"...\"," +
                         "\"attributes\":"
             );
-            while(resultSet.next())
+            do
             {
                 printWriter.write(
                         "{" +
                             "\"user_id\":\"" + resultSet.getString("user_id") + "\"," +
                             "\"username\":\"" + resultSet.getString("username") + "\"," +
                             "\"email\":\"" + resultSet.getString("email") + "\"," +
-                            "\"phone\":\"" + resultSet.getString("phone") + "\"," +
+                            "\"phone\":\"" + resultSet.getString("phoneNum") + "\"," +
                         "}"
                 );
                 if(!resultSet.isAfterLast())
                 {
                     printWriter.write(",");
                 }
-            }
+            }while(resultSet.next());
             printWriter.write(
                     "]}"
             );
@@ -67,10 +67,10 @@ public class HelperFunctions
                         "\"id\":\"...\"," +
                         "\"attributes\":{"
             );
-            resultSet1.next();
+            //resultSet1.next();
             printWriter.write(
                             "\"event_id\":\"" + resultSet1.getString("event_id") + "\"," +
-                            "\"eventname\":\"" + resultSet1.getString("event_id") + "\"," +
+                            "\"eventname\":\"" + resultSet1.getString("eventname") + "\"," +
                             "\"location\":\"" + resultSet1.getString("location") + "\"," +
                             "\"goTime\":\"" + resultSet1.getString("goTime") + "\"," +
                             "\"price\":\"" + resultSet1.getString("price") + "\"," +
@@ -79,7 +79,7 @@ public class HelperFunctions
                             "\"attendees\":{"
             );
             int counter = 1;
-            while(resultSet2.next())
+            do
             {
                 printWriter.write(
                                 "\"" + (counter++) + "\":\"" + resultSet2.getString("user_id") + "\""
@@ -88,7 +88,7 @@ public class HelperFunctions
                 {
                     printWriter.write(",");
                 }
-            }
+            }while(resultSet2.next());
             printWriter.write(
                             "}" +
                         "}" +

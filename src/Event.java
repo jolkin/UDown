@@ -61,8 +61,9 @@ public class Event extends HttpServlet
             p.setInt( 2,  uid);
 
             ResultSet rs = p.executeQuery();
-            while(rs.next())
+            while(!rs.isClosed())
             {
+                rs.next();
                 int eid = rs.getInt( 1 );
                 PreparedStatement e = con.prepareStatement( "select event_id, eventname, location, goTime, price, description, user_id from events where event_id = ? " );
 
@@ -78,11 +79,11 @@ public class Event extends HttpServlet
 
                 if ( event.next( ) && rsvp.next() )
                 {
+                    String name = event.getString( "eventname" );
                     HelperFunctions.eventToJson(event, rsvp, out);
                 }
                 //call other helper
             }
-            out.print( "Get got sonny" );
             rs.close();
             con.close();
         }

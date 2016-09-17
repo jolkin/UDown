@@ -72,21 +72,23 @@ public class User extends HttpServlet
 
 
             rs = p.executeQuery();
-            while(rs.next())
+            while(!rs.isClosed())
             {
-                PreparedStatement e = con.prepareStatement( "select event_id, location, goTime, price, description, user_id from events where event_id = ? " );
+                rs.next();
+                int eid = rs.getInt( 1 );
+                PreparedStatement e = con.prepareStatement( "select event_id, eventname, location, goTime, price, description, user_id from events where event_id = ? " );
 
-                e.setInt( 1, rs.getInt( 1 ) );
+                e.setInt( 1, eid );
 
                 ResultSet event = p.executeQuery( );
 
                 PreparedStatement people = con.prepareStatement( "select username from users T1 inner join events T2 on T1.user_id=T2.user_id and event_id = ?" );
 
-                people.setInt( 1, rs.getInt( 1 ) );
+                people.setInt( 1, eid );
 
                 ResultSet rsvp = people.executeQuery();
 
-                if ( event.next( ) && rsvp.next() )
+                if ( event.next( ) && rsvp.next())
                 {
                     HelperFunctions.eventToJson(event, rsvp, out);
                 }
@@ -99,8 +101,7 @@ public class User extends HttpServlet
 
             rs = p.executeQuery();
             //call helper here
-
-            out.print( "<html><body>DID IT!</body></html>" );
+            rs.close();
             con.close();
 
         }

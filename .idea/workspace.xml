@@ -74,19 +74,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+            <state relative-caret-position="285">
+              <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1474105332000" expanded="true" signature="1650:1720" ph="select user_... users" />
-                <marker date="1474105332000" expanded="true" signature="2048:2097" ph="SELECT event... attendance" />
-                <marker date="1474105332000" expanded="true" signature="2048:2149" ph="SELECT event... " />
-                <marker date="1474105332000" expanded="true" signature="2104:2149" ph="SELECT event... events" />
-                <marker date="1474105332000" expanded="true" signature="2359:2452" ph="select event... events" />
-                <marker date="1474105332000" expanded="true" signature="2627:2719" ph="select usern... users" />
+                <marker date="1474114761000" expanded="true" signature="1650:1720" ph="select user_... users" />
+                <marker date="1474114761000" expanded="true" signature="2048:2097" ph="SELECT event... attendance" />
+                <marker date="1474114761000" expanded="true" signature="2048:2149" ph="SELECT event... " />
+                <marker date="1474114761000" expanded="true" signature="2104:2149" ph="SELECT event... events" />
+                <marker date="1474114761000" expanded="true" signature="2359:2452" ph="select event... events" />
+                <marker date="1474114761000" expanded="true" signature="2627:2719" ph="select usern... users" />
+                <marker date="1474114761000" expanded="true" signature="3013:3065" ph="select inter... userInterests" />
               </folding>
             </state>
           </provider>
@@ -95,16 +96,49 @@
       <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
-                <marker date="1474105323000" expanded="true" signature="1701:1750" ph="SELECT event... attendance" />
-                <marker date="1474105323000" expanded="true" signature="1701:1802" ph="SELECT event... " />
-                <marker date="1474105323000" expanded="true" signature="1757:1802" ph="SELECT event... events" />
-                <marker date="1474105323000" expanded="true" signature="2063:2167" ph="select event... events" />
-                <marker date="1474105323000" expanded="true" signature="2330:2422" ph="select usern... users" />
-                <marker date="1474105323000" expanded="true" signature="4194:4292" ph="insert into events... " />
+                <marker date="1474115790000" expanded="true" signature="1701:1750" ph="SELECT event... attendance" />
+                <marker date="1474115790000" expanded="true" signature="1701:1802" ph="SELECT event... " />
+                <marker date="1474115790000" expanded="true" signature="1757:1802" ph="SELECT event... events" />
+                <marker date="1474115790000" expanded="true" signature="2095:2199" ph="select event... events" />
+                <marker date="1474115790000" expanded="true" signature="2362:2454" ph="select usern... users" />
+                <marker date="1474115790000" expanded="true" signature="2521:2556" ph="select inter... eventInterests" />
+                <marker date="1474115790000" expanded="true" signature="2521:2575" ph="select inter... eventInterests" />
+                <marker date="1474115790000" expanded="true" signature="4609:4707" ph="insert into events... " />
+                <marker date="1474115790000" expanded="true" signature="5020:5052" ph="select max(e... events" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Events.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Events.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="83" column="47" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="47" />
+              <folding>
+                <marker date="1474116232000" expanded="true" signature="1579:1599" ph="SELECT event... attendance" />
+                <marker date="1474116232000" expanded="true" signature="1579:1606" ph="SELECT event... " />
+                <marker date="1474116232000" expanded="true" signature="1579:1609" ph="SELECT event... " />
+                <marker date="1474116232000" expanded="true" signature="1599:1606" ph="SELECT event... events" />
+                <marker date="1474116232000" expanded="true" signature="1835:1939" ph="select event... events" />
+                <marker date="1474116232000" expanded="true" signature="2102:2194" ph="select usern... users" />
+                <marker date="1474116232000" expanded="true" signature="2261:2315" ph="select inter... eventInterests" />
+                <marker date="1474116232000" expanded="true" signature="4349:4447" ph="insert into events... " />
+                <marker date="1474116232000" expanded="true" signature="4760:4792" ph="select max(e... events" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,7 +158,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HackCMU2016.events" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HackCMU2016.events" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/22717e1c/6dd1ebbc-b3dc-4bfa-9885-de2c91ded5ff/HackCMU2016.events">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -171,7 +205,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/DBTest.java" />
         <option value="$PROJECT_DIR$/src/HelloWorld.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/server.template.xml" />
         <option value="$PROJECT_DIR$/UDowndb.properties" />
         <option value="$PROJECT_DIR$/database/create.sql" />
@@ -179,8 +212,11 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jake.template.xml" />
         <option value="dbtable:/22717e1c/6dd1ebbc-b3dc-4bfa-9885-de2c91ded5ff/HackCMU2016.users" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/Event.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
+        <option value="$PROJECT_DIR$/src/Event.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/Events.java" />
+        <option value="$PROJECT_DIR$/src/HelperFunctions.java" />
       </list>
     </option>
   </component>
@@ -268,24 +304,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServerTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServerTestNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -317,8 +335,14 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CodeClash/cc-server/registration/cc-core/src/org/codeclash/registration" />
     <property name="FullScreen" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/WEB-INF" />
       <recent name="$PROJECT_DIR$" />
@@ -838,16 +862,16 @@
       <option name="presentableId" value="Default" />
       <updated>1474056275150</updated>
       <workItem from="1474056279138" duration="3771000" />
-      <workItem from="1474096680701" duration="7686000" />
+      <workItem from="1474096680701" duration="11812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11457000" />
+    <option name="totallyTimeSpent" value="15583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -863,7 +887,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49535194" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49535194" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5046481" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -895,12 +919,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/User.java</url>
-          <line>96</line>
+          <line>103</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Event.java</url>
-          <line>132</line>
+          <line>144</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -1034,14 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/user.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1090,34 +1106,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1474105332000" expanded="true" signature="1650:1720" ph="select user_... users" />
-            <marker date="1474105332000" expanded="true" signature="2048:2097" ph="SELECT event... attendance" />
-            <marker date="1474105332000" expanded="true" signature="2048:2149" ph="SELECT event... " />
-            <marker date="1474105332000" expanded="true" signature="2104:2149" ph="SELECT event... events" />
-            <marker date="1474105332000" expanded="true" signature="2359:2452" ph="select event... events" />
-            <marker date="1474105332000" expanded="true" signature="2627:2719" ph="select usern... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-          <folding>
-            <marker date="1474105323000" expanded="true" signature="1701:1750" ph="SELECT event... attendance" />
-            <marker date="1474105323000" expanded="true" signature="1701:1802" ph="SELECT event... " />
-            <marker date="1474105323000" expanded="true" signature="1757:1802" ph="SELECT event... events" />
-            <marker date="1474105323000" expanded="true" signature="2063:2167" ph="select event... events" />
-            <marker date="1474105323000" expanded="true" signature="2330:2422" ph="select usern... users" />
-            <marker date="1474105323000" expanded="true" signature="4194:4292" ph="insert into events... " />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,5 +1140,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <marker date="1474115790000" expanded="true" signature="1701:1750" ph="SELECT event... attendance" />
+            <marker date="1474115790000" expanded="true" signature="1701:1802" ph="SELECT event... " />
+            <marker date="1474115790000" expanded="true" signature="1757:1802" ph="SELECT event... events" />
+            <marker date="1474115790000" expanded="true" signature="2095:2199" ph="select event... events" />
+            <marker date="1474115790000" expanded="true" signature="2362:2454" ph="select usern... users" />
+            <marker date="1474115790000" expanded="true" signature="2521:2556" ph="select inter... eventInterests" />
+            <marker date="1474115790000" expanded="true" signature="2521:2575" ph="select inter... eventInterests" />
+            <marker date="1474115790000" expanded="true" signature="4609:4707" ph="insert into events... " />
+            <marker date="1474115790000" expanded="true" signature="5020:5052" ph="select max(e... events" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="83" column="47" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="47" />
+          <folding>
+            <marker date="1474116232000" expanded="true" signature="1579:1599" ph="SELECT event... attendance" />
+            <marker date="1474116232000" expanded="true" signature="1579:1606" ph="SELECT event... " />
+            <marker date="1474116232000" expanded="true" signature="1579:1609" ph="SELECT event... " />
+            <marker date="1474116232000" expanded="true" signature="1599:1606" ph="SELECT event... events" />
+            <marker date="1474116232000" expanded="true" signature="1835:1939" ph="select event... events" />
+            <marker date="1474116232000" expanded="true" signature="2102:2194" ph="select usern... users" />
+            <marker date="1474116232000" expanded="true" signature="2261:2315" ph="select inter... eventInterests" />
+            <marker date="1474116232000" expanded="true" signature="4349:4447" ph="insert into events... " />
+            <marker date="1474116232000" expanded="true" signature="4760:4792" ph="select max(e... events" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HelperFunctions/HelperFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1474114761000" expanded="true" signature="1650:1720" ph="select user_... users" />
+            <marker date="1474114761000" expanded="true" signature="2048:2097" ph="SELECT event... attendance" />
+            <marker date="1474114761000" expanded="true" signature="2048:2149" ph="SELECT event... " />
+            <marker date="1474114761000" expanded="true" signature="2104:2149" ph="SELECT event... events" />
+            <marker date="1474114761000" expanded="true" signature="2359:2452" ph="select event... events" />
+            <marker date="1474114761000" expanded="true" signature="2627:2719" ph="select usern... users" />
+            <marker date="1474114761000" expanded="true" signature="3013:3065" ph="select inter... userInterests" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>ServerTest:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>UDown</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

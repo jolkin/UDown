@@ -7,6 +7,20 @@
     <display-name>UDown</display-name>
 
     <servlet>
+        <servlet-name>Events</servlet-name>
+        <description>
+        </description>
+        <servlet-class>Events</servlet-class>
+        <!-- Load this servlet at server startup time -->
+        <load-on-startup>5</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Events</servlet-name>
+        <url-pattern>/Events</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Event</servlet-name>
         <description>
         </description>

@@ -25,21 +25,14 @@ public class HelperFunctions
                         "\"id\":\"...\"," +
                         "\"attributes\":"
             );
-            do
-            {
-                printWriter.write(
+            printWriter.write(
                         "{" +
                             "\"user_id\":\"" + resultSet.getString("user_id") + "\"," +
                             "\"username\":\"" + resultSet.getString("username") + "\"," +
                             "\"email\":\"" + resultSet.getString("email") + "\"," +
-                            "\"phone\":\"" + resultSet.getString("phoneNum") + "\"," +
+                            "\"phone\":\"" + resultSet.getString("phoneNum") + "\"" +
                         "}"
-                );
-                if(!resultSet.isAfterLast())
-                {
-                    printWriter.write(",");
-                }
-            }while(resultSet.next());
+            );
             printWriter.write(
                     "]}"
             );
@@ -81,13 +74,11 @@ public class HelperFunctions
             int counter = 1;
             do
             {
-                printWriter.write(
-                                "\"" + (counter++) + "\":\"" + resultSet2.getString("user_id") + "\""
-                );
-                if(!resultSet2.isAfterLast())
-                {
+                if(counter != 1)
                     printWriter.write(",");
-                }
+                printWriter.write(
+                                "\"" + (counter++) + "\":\"" + resultSet2.getString("username") + "\""
+                );
             }while(resultSet2.next());
             printWriter.write(
                             "}" +

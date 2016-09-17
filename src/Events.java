@@ -2,6 +2,8 @@
  * Created by Jake on 9/16/16.
  */
 
+import HelperFunctions.HelperFunctions;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
@@ -52,7 +54,10 @@ public class Events extends HttpServlet
             resp.setContentType( "application/vnd.api+json" );
             PrintWriter out = resp.getWriter();
 
+            int uid = Integer.parseInt( req.getParameter( "uid" ) );
+
             PreparedStatement p = con.prepareStatement( "SELECT event_id from events" );
+
 
             ResultSet rs = p.executeQuery();
             while(!rs.isClosed())
@@ -67,28 +72,19 @@ public class Events extends HttpServlet
 
                 PreparedStatement people = con.prepareStatement( "select username from users T1 inner join events T2 on T1.user_id=T2.user_id and event_id = ?" );
 
-                PreparedStatement s = con.prepareStatement( "select interest from eventInterests where event_id = ?" );
-                s.setInt( 1, eid );
                 people.setInt( 1, eid );
 
                 ResultSet rsvp = people.executeQuery();
 
                 if ( event.next( ) && rsvp.next() )
                 {
-                    //call other helper
+                    String name = event.getString( "eventname" );
+                    HelperFunctions.eventToJson(event, rsvp, out);
                 }
-
-                ResultSet i = s.executeQuery();
-                while(!i.isClosed())
-                {
-                    //call helper for interests
-                }
-
+                //call other helper
             }
-            out.print( "Get got sonny" );
             rs.close();
             con.close();
-
         }
         catch ( SQLException e )
         {

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
+import HelperFunctions.*;
 
 /**
  * Created by Jake on 9/16/16.
@@ -59,7 +60,9 @@ public class User extends HttpServlet
             p.setInt( 1, uid);
             ResultSet rs = p.executeQuery();
             if(rs.next())
-            {}
+            {
+                HelperFunctions.userToJson(rs, out);
+            }
             //call gabriel's helper function
             rs.close();
 
@@ -85,6 +88,7 @@ public class User extends HttpServlet
 
                 if ( event.next( ) && rsvp.next() )
                 {
+                    HelperFunctions.eventToJson(event, rsvp, out);
                 }
                 //call other helper
             }

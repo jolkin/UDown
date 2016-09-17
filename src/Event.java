@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
+import HelperFunctions.*;
 
 public class Event extends HttpServlet
 {
@@ -77,13 +78,13 @@ public class Event extends HttpServlet
 
                 if ( event.next( ) && rsvp.next() )
                 {
+                    HelperFunctions.eventToJson(event, rsvp, out);
                 }
                 //call other helper
             }
             out.print( "Get got sonny" );
             rs.close();
             con.close();
-
         }
         catch ( SQLException e )
         {

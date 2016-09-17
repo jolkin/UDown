@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="8005" shutdown="SHUTDOWN">
+
+	<Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on"/>
+    <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
+	<Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
+	<Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener"/>
+
+	<Service name="Catalina">
+
+		<Connector
+			port="8080"
+			protocol="HTTP/1.1"
+			connectionTimeout="20000"
+			compression="on"
+			compressionMinSize="1024"
+			noCompressionUserAgents="gozilla,traviata"
+			compressableMimeType="text/html,text/xml,text/json,text/javascript,text/css,text/plain,application/json,application/javascript,application/xml,application/xml+xhtml"
+			URIEncoding="UTF-8"
+			acceptCount="100"
+			maxThreads="128"
+			maxKeepAliveRequests="-1"
+			maxPostSize="41943040"
+			socket.soTimeout="90000"
+			scheme="http"
+			server="UDown"
+			redirectPort="7778"/>
+<!--
+		<Connector
+			port="7778"
+			protocol="org.apache.coyote.http11.Http11NioProtocol"
+			connectionTimeout="20000"
+			compression="on"
+			compressionMinSize="1024"
+			noCompressionUserAgents="gozilla,traviata"
+			compressableMimeType="text/html,text/xml,text/json,text/javascript,text/css,text/plain,application/json,application/javascript,application/xml,application/xml+xhtml"
+			URIEncoding="UTF-8"
+			acceptCount="100"
+			maxThreads="128"
+			maxKeepAliveRequests="-1"
+			maxPostSize="41943040"
+			socket.soTimeout="90000"
+			scheme="https"
+			server="CodeClash"
+			SSLEnabled="true"
+			secure="true"
+			keystoreFile="@KEYSTOREFILE@"
+			keystorePass="@KEYSTOREPASS@"/>
+-->
+
+		<Engine
+			name="Catalina"
+			defaultHost="localhost">
+
+			<Host
+				name="localhost"
+				appBase="webapps"
+				unpackWARs="true"
+				autoDeploy="true">
+
+				<Valve
+					className="org.apache.catalina.valves.AccessLogValve"
+					directory="logs"
+					prefix="localhost_access_log."
+					suffix=".txt"
+					pattern="%h %l %u %t &quot;%r&quot; %s %b"/>
+
+			</Host>
+		</Engine>
+	</Service>
+</Server>

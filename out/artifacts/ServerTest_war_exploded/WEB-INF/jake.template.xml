@@ -1,0 +1,33 @@
+<Context
+	path="/jake"
+	docBase="@DOCBASE@"
+	reloadable="false">
+
+	<Manager pathname=""/>
+
+	<Resource
+		name="jdbc/MySQLDB"
+		auth="Container"
+		type="javax.sql.DataSource"
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		testWhileIdle="true"
+		testOnBorrow="true"
+		testOnReturn="false"
+		validationQuery="select 1"
+		validationInterval="30000"
+		initialSize="16"
+		minIdle="16"
+		maxIdle="32"
+		maxActive="128"
+		maxWait="10000"
+		timeBetweenEvictionRunsMillis="30000"
+		minEvictableIdleTimeMillis="30000"
+		jmxEnabled="true"
+		jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+		driverClassName="com.mysql.jdbc.Driver"
+		username="jake"
+		password="jake"
+		url="jdbc:mysql://@SQL_DB_HOST@/@SQL_DB_NAME@"
+		connectionProperties="rewriteBatchedStatements=true;blobSendChunkSize=67108864;useServerPrepStmts=true;characterEncoding=utf8;characterSetResults=utf8;sessionVariables=sql_mode='ANSI_QUOTES'"/>
+
+</Context>

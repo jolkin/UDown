@@ -1,0 +1,7 @@
+<Context allowLinking="true">
+  <Resource name="jdbc/MySQLDB" auth="Container" type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            username="@SQL_USER_NAME@" password="@SQL_USER_PASS@"
+            maxIdle="5" maxActive="60"
+            url="jdbc:mysql://@SQL_DB_HOST@:3306/@SQL_DB_NAME@"/>
+</Context>

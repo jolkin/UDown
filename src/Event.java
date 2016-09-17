@@ -60,8 +60,9 @@ public class Event extends HttpServlet
             p.setInt( 2,  uid);
 
             ResultSet rs = p.executeQuery();
-            while(rs.next())
+            while(!rs.isClosed())
             {
+                rs.next();
                 int eid = rs.getInt( 1 );
                 PreparedStatement e = con.prepareStatement( "select event_id, eventname, location, goTime, price, description, user_id from events where event_id = ? " );
 
@@ -71,14 +72,23 @@ public class Event extends HttpServlet
 
                 PreparedStatement people = con.prepareStatement( "select username from users T1 inner join events T2 on T1.user_id=T2.user_id and event_id = ?" );
 
+                PreparedStatement s = con.prepareStatement( "select interest from eventInterests where event_id = ?" );
+                s.setInt( 1, eid );
                 people.setInt( 1, eid );
 
                 ResultSet rsvp = people.executeQuery();
 
                 if ( event.next( ) && rsvp.next() )
                 {
+                    //call other helper
                 }
-                //call other helper
+
+                ResultSet i = s.executeQuery();
+                while(!i.isClosed())
+                {
+                    //call helper for interests
+                }
+
             }
             out.print( "Get got sonny" );
             rs.close();
@@ -107,7 +117,9 @@ public class Event extends HttpServlet
             Connection con = DriverManager.getConnection( "jdbc:mysql://localhost:3306/HackCMU2016", "root",  "321blast" );
 
 
-            addEvent(con, req.getParameter( "eventname" ), req.getParameter( "location" ), req.getParameter( "goTime" ), req.getParameter( "price" ), req.getParameter( "description" ), req.getParameter( "uid") );
+            int eid = addEvent(con, req.getParameter( "eventname" ), req.getParameter( "location" ), req.getParameter( "goTime" ), req.getParameter( "price" ), req.getParameter( "description" ), req.getParameter( "uid") );
+
+            //add interests to table here
             //TODO Add redirect
 
         }
@@ -123,7 +135,7 @@ public class Event extends HttpServlet
         }
     }
 
-    private void addEvent(Connection con, String name, String where, String when, String price, String description, String uid)
+    private int addEvent(Connection con, String name, String where, String when, String price, String description, String uid)
         throws ServletException
     {
         try
@@ -138,6 +150,12 @@ public class Event extends HttpServlet
             p.setInt( 6,  Integer.parseInt( uid ));
 
             p.execute();
+
+            p = con.prepareStatement( "select max(event_id) from events" );
+            ResultSet rs = p.executeQuery();
+            rs.next();
+            return rs.getInt( 1 );
+
 
         }
         catch ( SQLException e )

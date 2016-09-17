@@ -89,6 +89,13 @@ public class User extends HttpServlet
                 //call other helper
             }
 
+            p = con.prepareStatement( "select interest from userInterests where user_id = ?" );
+
+            p.setInt( 1, uid );
+
+            rs = p.executeQuery();
+            //call helper here
+
             out.print( "<html><body>DID IT!</body></html>" );
             con.close();
 
